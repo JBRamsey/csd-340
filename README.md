@@ -1,2 +1,4 @@
-# csd-340
- HTML CSD-340 Joshua Ramsey Git Repository
+# CSD 340 Web Development with HTML and CSS
+## Contributors
+* Joshua Ramsey
+* Darren Osier
