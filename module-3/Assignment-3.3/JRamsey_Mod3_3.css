@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+h3 {
+    font-weight: 500;
+}
+
+ol, ul {
+    padding-left: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Add this style for top alignment */
+div[style^="width: 45%"] {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 20px; /* Adjust margin if necessary */
+}
+
+div[style="width: 100%; margin-top: 60%;"] {
+    float: right;
+    margin-bottom: 20px;
+}
