@@ -1,0 +1,45 @@
+<!-- Joshua Ramsey: Assignment 2.2 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>CSD 340 Development with HTML and CSS</title>
+	<meta name="description"
+		content="An assignment for CSD 340" >
+	<meta name="author"
+		content="Joshua Ramsey" >
+	<meta name="keywords"
+		content="school, Bellevue, academic, programming, software, engineering" >
+	<meta name="School" 
+		content="Bellevue" >
+	<link href="JRamsey_Mod2_2.css" type="text/css" rel="stylesheet" >
+		<script>
+			var firstVariableValue = "Ramsey";
+			var secondVariableValue = "1990";
+			var thirdVariableValue = "Software";
+			var fourthVariableValue = "Shadowrun";
+		</script>
+</head>
+
+<body>
+	<div id="container"></div>
+	<h1>Assignment 9.3 – JavaScript - Part 1</h1>
+	<p>Hello, my name is Joshua <span id = "Ramsey">______</span>. I was born in <span id = "1990">____</span>. I am a libra.</p>
+	<p>I was born in Las Vegas, Nevada. I moved to Evansville, Indiana four years ago. I live with my grandmother.</p>
+	<p>I have a Bachelor's in Fine Arts. I am currently attending Bellevue for a Bachelor's of Science.
+	I am studying <span id = "Software">________</span> Engineering.</p>
+	<p>My hobbies include art, reading, and writing. I write a <span id = "Shadowrun">_________</span> campaign with a group of friends of mine every week.
+	My favorite book is Dracula by Bram Stoker.</p>
+	<hr>
+	<p>
+		<button type="button"
+			onclick="document.getElementById('Ramsey').innerHTML = firstVariableValue">Ramsey</button>
+		<button type="button"
+			onclick="document.getElementById('1990').innerHTML = secondVariableValue">1990</button>
+		<button type="button"
+			onclick="document.getElementById('Software').innerHTML = thirdVariableValue">Software</button>
+		<button type="button"
+			onclick="document.getElementById('Shadowrun').innerHTML = fourthVariableValue">Shadowrun</button>
+	</p>
+</body>
+
+</html>
