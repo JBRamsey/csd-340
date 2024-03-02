@@ -1,0 +1,64 @@
+<!-- Joshua Ramsey: Assignment 2.2 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>CSD 340 Development with HTML and CSS</title>
+	<meta name="description"
+		content="An assignment for CSD 340" >
+	<meta name="author"
+		content="Joshua Ramsey" >
+	<meta name="keywords"
+		content="school, Bellevue, academic, programming, software, engineering" >
+	<meta name="School" 
+		content="Bellevue" >
+</head>
+
+<body>
+	<div id="container"></div>
+	<h1>Assignment 11.2 – JavaScript - Part 3</h1>
+	<label for="entry">Entry:</label>
+	<input type="text" id="entry" />
+	<button onclick="addElement()">Add</button>
+	<button onclick="deleteLastEntry()">Delete Last Entry</button>
+	<button onclick="displayArray()">Display</button>
+	
+<script>
+	// Initialize an empty array
+	let dataArray = [];
+	
+	// Function to add an element to the array.
+	function addElement() {
+		const entryText = document.getElementById('entry').value;
+		dataArray.push(entryText);
+		alert(`Added: ${entryText} at index ${dataArray.length}`);
+		// Clears the text box after adding the element.
+		document.getElementById('entry').value = '';
+	}
+	
+	// Delete the last entry from the array.
+	function deleteLastEntry() {
+		if (dataArray.length > 0) {
+			const deletedEntry= dataArray.pop();
+			alert(`Deleted Last Entry: ${deletedEntry}`);
+		} else {
+			alert("Array is already empty");
+		}
+	}
+	
+	// Function to display the contents of the array. 
+	function displayArray() {
+		if (dataArray.length > 0) {
+			alert(`Array Contents: ${dataArray.map((entry, index) => `${entry} at index ${index + 1}`).join(', ')}`);
+		} else {
+			alert("Array is empty");
+		}
+	}
+	
+</script>
+
+<p>The above buttons will allow you to add data to an array, pop the entries in reverse order of entering them, and display all current entries.</p>
+
+		
+</body>
+
+</html>
