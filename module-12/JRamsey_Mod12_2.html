@@ -1,0 +1,86 @@
+<!-- Joshua Ramsey: Assignment 12.2 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <meta name="description"
+        content="An assignment for CSD 340" >
+    <meta name="author"
+        content="Joshua Ramsey" >
+    <link href="JRamsey_Mod12_2.css" type="text/css" rel="stylesheet" >
+</head>
+
+<body>
+    <div id="container"></div>
+    <h1 style="text-align: center;">Assignment 12.2: JavaScript - Part 4</h1>
+
+    <div style="width: 100%; margin-top: 20px;">
+        <button onclick="sortTopToBottom()">1. Top to Bottom</button>
+        <button onclick="sortBottomToTop()">2. Bottom to Top</button>
+    </div>
+
+    <div style="width: 45%; display: inline-block;">
+        <h3 style="font-weight: 500;">1. Top 10 Favorite Books</h3>
+        <ol id="booksList" style="border: 1px solid red; border-radius: 15px; padding: 10px; list-style: inside; list-style-position: inside; font-weight: 300;">
+        </ol>
+    </div>
+
+    <div style="width: 45%; display: inline-block;">
+        <h3 style="font-weight: 500;">2. 5 Things I’ve Learned Since the Course Started</h3>
+        <ul style="border: 1px dashed red; border-radius: 15px; padding: 10px; list-style: upper-roman; list-style-position: inside; font-weight: 300;">
+            <li>How to Write HTML</li>
+            <li>How to Write CSS</li>
+            <li>How Websites are Made</li>
+            <li>How Readers for the Disabled Work on Websites</li>
+            <li>How Github can host websites.</li>
+        </ul>
+    </div>
+
+    <div style="width: 100%; margin-top: 20px;">
+        <a href="../../index.html" style="float: right;">Back to Landing Page</a>
+    </div>
+
+    <script>
+        var booksArray = [
+            { title: "Dracula", value: 1 },
+            { title: "Dr. Jekyll and Mr. Hyde", value: 2 },
+            { title: "Frankenstein", value: 3 },
+            { title: "Rainbow Six", value: 4 },
+            { title: "Hunt for Red October", value: 5 },
+            { title: "The Way of Kings", value: 6 },
+            { title: "Harry Potter", value: 7 },
+            { title: "A Song of Ice and Fire", value: 8 },
+            { title: "The Lord of the Rings", value: 9 },
+            { title: "Call of Cthulhu", value: 10 }
+        ];
+
+        function sortTopToBottom() {
+            var booksList = document.getElementById("booksList");
+            booksArray.sort(function(a, b) {
+                return a.value - b.value;
+            });
+            displayBooks(booksList);
+        }
+
+        function sortBottomToTop() {
+            var booksList = document.getElementById("booksList");
+            booksArray.sort(function(a, b) {
+                return b.value - a.value;
+            });
+            displayBooks(booksList);
+        }
+
+        function displayBooks(list) {
+            list.innerHTML = "";
+
+            for (var i = 0; i < booksArray.length; i++) {
+                var listItem = document.createElement("li");
+                listItem.appendChild(document.createTextNode((i + 1) + ". " + booksArray[i].title));
+                list.appendChild(listItem);
+            }
+        }
+
+        sortTopToBottom();
+    </script>
+</body>
+</html>
